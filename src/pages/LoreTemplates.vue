@@ -274,14 +274,10 @@ export default defineComponent({
       const memo = asset.template_id.toString()
       userStore.transfer(quantity, memo, asset.price.contract)
       // this is done so when the transfer is called it should trigger update of the assets so the minted NFT is shown properly and mint price is updated
-      // Schedule first fetch 30 seconds later
+      // Schedule first fetch 3 seconds later
       setTimeout(() => {
         fetchAssets()
-        // Schedule second fetch 2.5 minutes after the first fetch
-        setTimeout(() => {
-          fetchAssets()
-        }, 120000) // 2.5 minutes = 150000 milliseconds
-      }, 30000)
+      }, 3000)
     }
 
     const fetchAssets = async() => {

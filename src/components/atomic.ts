@@ -50,9 +50,6 @@ interface TemplatesPrices {
 const client = new APIClient({ url: endpoints[2][1] })
 
 export const collections:string[] = ["meownfttest1"]
-export const collectionsTemplates:string[] = [
-  "meownfttest1"
-]
 
 const code = "atomicassets" // contract account name
 export const nftmintcontract = "easynftmintr" // contract account name for minting NFTs

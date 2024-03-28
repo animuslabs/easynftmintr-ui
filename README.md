@@ -12,6 +12,10 @@ npm install
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
 quasar dev
+# or
+npm run dev
+# or
+yarn dev
 ```
 
 
@@ -30,6 +34,12 @@ yarn format
 npm run format
 ```
 
+### Check for typescript errors
+```bash
+yarn tsc
+# or
+npm run tsc
+```
 
 
 ### Build the app for production
@@ -42,9 +52,11 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quas
 
 
 # to change network
-anchor.ts --> line no.6 --> const client = new APIClient({ url: endpoints[1][1] })
 
-atomic.ts --> line no.50 --> const client = new APIClient({ url: endpoints[1][1] })
-and collections change
+anchor.ts --> const client = new APIClient({ url: endpoints[1][1] })
+
+atomic.ts --> const client = new APIClient({ url: endpoints[1][1] })
+and collection/contract names change
 
 config.ts --> change networks
+

@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { mergeTemplatesAndAssets, AssetRow, getAllSchemas, SchemaData, extractIpfsHashFromTemplates, ExtendedTemplateRow, collections, collectionsTemplates } from "../components/atomic"
+import { mergeTemplatesAndAssets, AssetRow, getAllSchemas, SchemaData, extractIpfsHashFromTemplates, ExtendedTemplateRow, collections } from "../components/atomic"
 
 export const useStore = defineStore("dataStore", {
   state: () => ({
@@ -16,7 +16,7 @@ export const useStore = defineStore("dataStore", {
       this.schemas = await getAllSchemas()
     },
     async fetchDeserializedTemplates() {
-      this.deserializedTemplates = await extractIpfsHashFromTemplates(collectionsTemplates)
+      this.deserializedTemplates = await extractIpfsHashFromTemplates(collections)
     }
   }
 })
